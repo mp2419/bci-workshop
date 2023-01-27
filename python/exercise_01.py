@@ -122,5 +122,11 @@ if __name__ == "__main__":
             plotter_feat.update_plot(feat_buffer)
             plt.pause(0.00001)
 
+
     except KeyboardInterrupt:
         print('Closing!')
+
+print(eeg_buffer)
+print(feat_buffer)
+plotter_eeg.update_plot(eeg_buffer)
+plotter_feat.update_plot(feat_buffer)

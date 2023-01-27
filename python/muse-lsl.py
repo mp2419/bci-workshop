@@ -8,7 +8,7 @@ parser.add_option("-a", "--address",
                   dest="address", type='string', default=None,
                   help="device mac adress.")
 parser.add_option("-n", "--name",
-                  dest="name", type='string', default=None,
+                  dest="Muse-C5D9", type='string', default=None,
                   help="name of the device.")
 parser.add_option("-b", "--backend",
                   dest="backend", type='string', default="auto",
@@ -37,9 +37,9 @@ def process(data, timestamps):
     for ii in range(12):
         outlet.push_sample(data[:, ii], timestamps[ii])
 
-muse = Muse(address=options.address, callback=process,
+muse = Muse(address="4107-CKYY-C5D9", callback=process,
             backend=options.backend, time_func=local_clock,
-            interface=options.interface, name=options.name)
+            interface=options.interface, name="Muse-C5D9")
 
 muse.connect()
 print('Connected')
